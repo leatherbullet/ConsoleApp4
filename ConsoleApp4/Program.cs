@@ -28,7 +28,7 @@ namespace ConsoleApp4
             {
                 if (numbers[i] > numbers[i + 1] && numbers[i] > numbers[i - 1])
                 {
-                    Console.WriteLine(numbers[i] + " ");
+                    Console.WriteLine(numbers[i]);
                 }
             }
         }
