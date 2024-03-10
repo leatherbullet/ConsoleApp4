@@ -24,12 +24,22 @@ namespace ConsoleApp4
             Console.SetCursorPosition(0,1);
             Console.WriteLine("локальные максимумы");
 
+            if (numbers[0] > numbers[1])
+            {
+               Console.WriteLine("первый локальный максимум: " + numbers[0]);
+            }
+            
             for (int i = 1; i < numbers.Length - 1; i++)
             {
                 if (numbers[i] > numbers[i + 1] && numbers[i] > numbers[i - 1])
                 {
                     Console.WriteLine(numbers[i]);
                 }
+            }
+
+            if (numbers[29] > numbers[28])
+            {
+               Console.WriteLine("последний локальный максимум: " + numbers[29]);  
             }
         }
     }
