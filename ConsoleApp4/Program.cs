@@ -8,10 +8,14 @@ namespace ConsoleApp4
         {
             Random random = new Random();
 
-            int size = 30;
+            int size;
             int minValue = 0;
             int maxValue = 10;
-
+            int penultimateIndex = 2;
+            
+            Console.WriteLine("введите размер массива:");
+            size = Convert.ToInt32(Console.ReadLine());
+            
             int[] numbers = new int[size];
 
             for (int i = 0; i < numbers.Length; i++)
@@ -21,12 +25,12 @@ namespace ConsoleApp4
                 Console.Write(numbers[i] + " ");
             }
 
-            Console.SetCursorPosition(0,1);
+            Console.SetCursorPosition(0,3);
             Console.WriteLine("локальные максимумы");
 
             if (numbers[0] > numbers[1])
             {
-               Console.WriteLine("первый локальный максимум: " + numbers[0]);
+               Console.WriteLine(numbers[0]);
             }
             
             for (int i = 1; i < numbers.Length - 1; i++)
@@ -37,9 +41,9 @@ namespace ConsoleApp4
                 }
             }
 
-            if (numbers[29] > numbers[28])
+            if (numbers[size - 1] > numbers[size - penultimateIndex])
             {
-               Console.WriteLine("последний локальный максимум: " + numbers[29]);  
+               Console.WriteLine(numbers[size - 1]);  
             }
         }
     }
